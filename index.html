@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
     <body>
-        <header>
-            <span>
-                <button id="__new">+</button>
-                <input type="text" id="__name" placeholder="Nombre de tarea nueva"/>
-            </span>
-        </header>
+        <form id="projectForm">
+            <input type="text" id="projectName" placeholder="Nombre del proyecto">
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <button type="button" id="createProject">Crear Proyecto</button>
+        </form>
+        <div id="projectContainer"></div>
+        <form id="edit__form">
+            <input type="text" id="edit__form__text"><br>
+            <input type="date" id="edit__form__date"><br>
+            <div id="edit__form__type" style='visibility: hidden;'>Estilo</div>
+            <button type="button" id="edit__form__submit">Aceptar</button>
+            <button type="button" id="edit__form__close" onclick="hideEditForm();">Cerrar</button>
+        </form>
+
         <script src="script.js"></script>
     </body>
 </html>
