@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body>
         <form id="projectForm">
@@ -18,9 +24,10 @@
         <form id="edit__form">
             <input type="text" id="edit__form__text"><br>
             <input type="date" id="edit__form__date"><br>
-            <div id="edit__form__type" style='visibility: hidden;'>Estilo</div>
-            <button type="button" id="edit__form__submit">Aceptar</button>
-            <button type="button" id="edit__form__close" onclick="hideEditForm();">Cerrar</button>
+            <div id="edit__form__type" style='display: none;'>Estilo</div>
+            <div id="edit__form__number" style='display: none;'>0</div>
+            <button class ="edit--form--button" type="button" id="edit__form__submit">Aceptar</button>
+            <button class ="edit--form--button" type="button" id="edit__form__close">Cerrar</button>
         </form>
 
         <script src="script.js"></script>

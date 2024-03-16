@@ -1,5 +1,5 @@
-
-.__project__ {
+ 
+  .__project__ {
     width: auto;
     height: auto;
     border-radius: 10px;
@@ -14,11 +14,55 @@
 
 #edit__form {
     display: flex;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: solid 1px #ccc;
+    position: fixed; /* Cambia a fixed para que se mantenga en el centro */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, 0%); /* Ajusta la posición para que el centro del formulario coincida con el centro de la pantalla */
+    background-color: brown;
     padding: 10px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
     visibility: hidden;
     margin: 10px;
 }
+
+.edit--form--button {
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: blanchedalmond; /* Fondo transparente */
+    color: black; /* Letras blancas */
+    font-weight: bold; /* Fuente en negrita */
+    padding: 10px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 12px; /* Tamaño de la fuente */
+    transition: all 0.5s; /* Transición suave de los estilos */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin: 5px; /* Espaciado externo */
+    width: auto;
+    height: auto;
+}
+
+.edit--button {
+    border: 2px solid brown; /* Borde marrón */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: transparent; /* Fondo transparente */
+    color: black; /* Letras blancas */
+    font-weight: bold; /* Fuente en negrita */
+    padding: 10px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 12px; /* Tamaño de la fuente */
+    transition: all 0.5s; /* Transición suave de los estilos */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin: 5px; /* Espaciado externo */
+    width: auto;
+    height: auto;
+}
+
+.edit--button:hover {
+    background-color: brown; /* Fondo marrón al pasar el mouse */
+    color: white; /* Letras negras al pasar el mouse */
+}
+
+.__project__modify {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    flex-direction: row; /* Alinea los elementos en una columna */
+};
