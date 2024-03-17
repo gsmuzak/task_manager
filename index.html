@@ -5,24 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Andika -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Kavoon-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Kavoon&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
     <body>
-        <form id="projectForm">
-            <input type="text" id="projectName" placeholder="Nombre del proyecto">
-            <input type="date" id="startDate">
-            <input type="date" id="endDate">
-            <button type="button" id="createProject">Crear Proyecto</button>
-        </form>
-        <div id="projectContainer"></div>
-        <form id="edit__form">
-            <input type="text" id="edit__form__text"><br>
-            <input type="date" id="edit__form__date"><br>
-            <div id="edit__form__type" style='visibility: hidden;'>Estilo</div>
-            <button type="button" id="edit__form__submit">Aceptar</button>
-            <button type="button" id="edit__form__close" onclick="hideEditForm();">Cerrar</button>
-        </form>
+        <header>
+            <div class="header--container">
+                <h1 class="kavoon-regular">PROJ.ADM</h1>
+                <div class="header--toolbar">
+                <!-- Barra de input para nombrar el proyecto -->
+                    <div class="header--toolbar--input--text">
+                        <label for="txtinp--header"class="style-col">Nombre</label>
+                        <input name="txtinp--header" id="textInput_header" type="text" 
+                        placeholder="Nombre del proyecto..."/>
+                    </div>
+                <!-- Elegir fecha inicio -->
+                    <div class="header--toolbar--input--date">
+                        <label for="iniinp--header">Inicio</label>
+                        <input name="iniinp--header" id="iniDateInput_header" type="date" />
+                    </div>
+                <!-- Elegir fecha finalización -->
+                    <div class="header--toolbar--input--date">
+                        <label for="endinp--header">Final</label>
+                        <input name="endinp--header" id="endDateInput_header" type="date" />
+                    </div>
+                
+                </div>
+                <!-- Botón para crear el proyecto -->
+                <button id ="" type="button andika-bold" class="andika-bold">
+                    Crear Proyecto Nuevo
+                </button>
 
+            </div>
+        </header>
+
+        <!-- Workspace -->
+        <main>
+            <!-- Proyecto almacenado -->
+            <div class="project--toolbar">
+
+                <div class="project--toolbar--text andika-regular">
+                    <h1>Proyecto Nuevo</h1>
+                    <p>DD/MM/AAAA - DD/MM/AAAA</p>
+                </div>
+                <button type="button" class="andika-bold">Expandir</button>
+
+            </div>
+            <!-- Proyecto abierto para edición -->
+            <section>
+                <div>
+                    <div>
+                        <h3>Proyecto Nuevo</h3>
+                        <p>Fecha creación</p>
+                    </div>
+                        <h4>01 ABRIL 2024</h4>
+                        <h4>30 ABRIL 2024</h4>
+                </div>
+            </section>
+        </main>
+        
         <script src="script.js"></script>
     </body>
 </html>
