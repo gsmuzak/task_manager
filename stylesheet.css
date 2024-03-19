@@ -1,44 +1,90 @@
-html body { padding: 0px; margin: 0px; background-color: #fff5da; }
 
-.andika-regular { font-family: "Andika", sans-serif;font-weight: 400;font-style: normal;}
-.andika-bold { font-family: "Andika", sans-serif;font-weight: 700;font-style: normal; }
-.andika-regular-italic { font-family: "Andika", sans-serif;font-weight: 400;font-style: italic; }
-.andika-bold-italic { font-family: "Andika", sans-serif;font-weight: 700;font-style: italic; }
-.kavoon-regular { font-family: "Kavoon", serif;font-weight: 400;font-style: normal; }
-      
+.andika-regular {
+    font-family: "Andika", sans-serif; font-weight: 400; font-style: normal;}
+.andika-bold {
+    font-family: "Andika", sans-serif; font-weight: 700; font-style: normal; }
+.andika-regular-italic {
+    font-family: "Andika", sans-serif; font-weight: 400; font-style: italic; }
+.andika-bold-italic {
+    font-family: "Andika", sans-serif; font-weight: 700; font-style: italic; }
+.kavoon-regular {
+    font-family: "Kavoon", serif; font-weight: 400; font-style: normal; }
+  
+:root {
+    --main-bg-color: rgba(200,200,200,1);
+    --button-bg-color: #eec55c;
+    --button-hover-color: aqua;
+    --button-active-color: white;
+    --button-border-color: #927731;
+    --button-shadow-color: rgba(0,0,0,0.5); }
 
-header { background-color: rgba(200,200,200,1);text-align: center;width: 100%;
-                            margin-bottom: 50px;}
-.header--container { display: flex;flex-direction: column; width: 100%; }
-.header--container h1 { font-size: 48px; }
-.header--container button { transform: translate(0px,15px);height: 50px;
-                            background-color: #eec55c;border-color: #b28d2d;
-                            border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;
-                            box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
-                            font-size: 20px;font-weight: bold; }
-.header--container button:hover { background-color:#b28d2d; }
-.header--container button:active { background-color: aqua; }
+* {
+    box-sizing: border-box; }
 
-.header--toolbar {  width: 100%;display: flex;flex-direction: row;justify-content: center;
-                    margin-bottom: 10px;}
-.header--toolbar--input--text { width: auto;display: flex;flex-direction: column;
-                                justify-content: center;margin-left: 10px;margin-right: 10px; }
-.header--toolbar--input--text input { width: 240px;height: 32px;border-radius: 6px; }
-.header--toolbar--input--date { width: auto;display: flex;flex-direction: column;
-                                justify-content: center;margin-right: 10px; }
-.header--toolbar--input--date input { width: 120px;height: 32px;border-radius: 6px; }
+html body {
+    padding: 0px; margin: 0px; background-color: #fff5da; }
+button, input {
+    border: none; }
 
-main { display: flex; flex-direction: column; }
+.flex-container {
+    display: flex; flex-direction: column; justify-content: center; width: 100%; }
+.flex-container-row {
+    display: flex; flex-direction: row; justify-content: center; width: 100%; }
 
-.project--toolbar { display: flex;justify-content: center;background-color: #eec55c;
-                    color: #927731;width: auto;margin: auto;border-radius: 10px;
-                    padding: 10px;box-shadow: 0px 2px 5px rgba(0,0,0,0.5); }
-.project--toolbar--text h1 { margin: 0px 20px 20px 20px;text-align: left;width: auto;height: 40px;
-                             font-size: 40px;font-weight: normal; }
-.project--toolbar--text p { margin: 0px 20px 10px 0px;text-align: right;font-size: 12px; }
-.project--toolbar button {  margin-top: auto;margin-bottom: auto;margin-right: 20px;width: 220px;
-                            height: 50px;background-color: transparent;border-style: dashed;
-                            border-radius: 50px;border-color: #927731;border-width: 3px;
-                            font-size: 18px;color: #927731; }
-.project--toolbar button:active {   background-color: #927731;border-color: #eec55c;
-                                    color: #eec55c; }
+header {
+    width: 100%; margin-bottom: 50px; background-color: var(--main-bg-color); text-align: center; }
+.header--container h1 {
+    font-size: 48px; }
+
+.header--container button {
+    height: 50px; transform: translate(0px,15px); border-bottom: 5px solid var(--button-border-color);
+    border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;
+    background-color: var(--button-bg-color); font-size: 20px;
+    box-shadow: 0px 2px 5px var(--button-shadow-color); }
+.header--container button:hover {
+    background-color: var(--button-hover-color); }
+.header--container button:active {
+    background-color: var(--button-active-color); }
+
+.header--toolbar {
+    margin-bottom: 10px; }
+.header--toolbar--input--text, .header--toolbar--input--date {
+    width: auto; margin-left: 10px; margin-right: 10px; }
+.header--toolbar--input--text input, .header--toolbar--input--date input {
+    height: 32px; border-radius: 6px; border: 1px solid black;
+}
+
+.project--toolbar {
+    background-color: #eec55c; color: #927731; width: 90%; margin: auto; 
+    border-radius: 10px; padding: 10px; box-shadow: 0px 2px 5px rgba(0,0,0,0.5); 
+    border-bottom: 5px solid #927731; margin-bottom: 30px; transition: 0.2s ease;}
+.project--toolbar--text h1 { 
+    margin: 0px 20px 10px 20px; text-align: left; height: min-content;
+    font-size: 40px; font-weight: normal; line-height: 40px;}
+.project--toolbar--text p { 
+    margin: 0px 0px 10px 22px;text-align: left;font-size: 12px; }
+.project--toolbar button {
+    margin-top: auto; margin-bottom: auto; margin-right: 20px; width: 220px; height: 50px;
+    background-color: transparent; border: 3px dashed #927731; border-radius: 50px;
+    font-size: 18px; color: #927731; transition: 0.2s ease; }
+.project--toolbar:hover, .project--toolbar:hover button{
+    background-color: #6a5eed; color: #281ac1; border-color: #281ac1; transform: scale(1.07); }
+.project--toolbar button:hover {
+    background-color: white;border-color: #6a5eed;}
+
+
+.pj--open {
+    background-color: white; color: black; border-bottom-color: gray; width: 90%;
+    align-items: center; border-top-left-radius: 0px; border-top-right-radius: 0px;
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.6); margin: auto; padding: 10px 15px 20px 15px; }
+.pj--open--title {
+    width: 100%;
+    height: 140px;
+}
+.pj--open--title h3 {
+    font-size: 36px; margin-bottom: 0px; }
+.pj--open--title p {
+    position:absolute; margin: 0px; padding: 5px; transform: translate(0%,-30%); color: gray; }
+
+.pj--open--date {
+    width: 40%; line-height: 0px; text-align: center;}

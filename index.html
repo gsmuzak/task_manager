@@ -19,30 +19,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
     <body>
-        <header>
-            <div class="header--container">
+        <header class="andika-regular">
+            <div class="header--container flex-container">
                 <h1 class="kavoon-regular">PROJ.ADM</h1>
-                <div class="header--toolbar">
+                <div class="header--toolbar flex-container-row">
                 <!-- Barra de input para nombrar el proyecto -->
-                    <div class="header--toolbar--input--text">
+                    <div class="header--toolbar--input--text flex-container">
                         <label for="txtinp--header"class="style-col">Nombre</label>
                         <input name="txtinp--header" id="textInput_header" type="text" 
                         placeholder="Nombre del proyecto..."/>
                     </div>
                 <!-- Elegir fecha inicio -->
-                    <div class="header--toolbar--input--date">
+                    <div class="header--toolbar--input--date flex-container">
                         <label for="iniinp--header">Inicio</label>
                         <input name="iniinp--header" id="iniDateInput_header" type="date" />
                     </div>
                 <!-- Elegir fecha finalización -->
-                    <div class="header--toolbar--input--date">
+                    <div class="header--toolbar--input--date flex-container">
                         <label for="endinp--header">Final</label>
                         <input name="endinp--header" id="endDateInput_header" type="date" />
                     </div>
                 
                 </div>
                 <!-- Botón para crear el proyecto -->
-                <button id ="" type="button andika-bold" class="andika-bold">
+                <button id ="button--create--proyect" type="button andika-bold" class="andika-bold">
                     Crear Proyecto Nuevo
                 </button>
 
@@ -50,29 +50,38 @@
         </header>
 
         <!-- Workspace -->
-        <main>
-            <!-- Proyecto almacenado -->
-            <div class="project--toolbar">
+        <main class="flex-container">
+            <!---->
+            <div class="project--toolbar flex-container-row">
 
-                <div class="project--toolbar--text andika-regular">
+                <div class="project--toolbar--text flex-container andika-regular">
                     <h1>Proyecto Nuevo</h1>
                     <p>DD/MM/AAAA - DD/MM/AAAA</p>
                 </div>
                 <button type="button" class="andika-bold">Expandir</button>
 
             </div>
-            <!-- Proyecto abierto para edición -->
-            <section>
-                <div>
-                    <div>
-                        <h3>Proyecto Nuevo</h3>
-                        <p>Fecha creación</p>
-                    </div>
-                        <h4>01 ABRIL 2024</h4>
-                        <h4>30 ABRIL 2024</h4>
-                </div>
-            </section>
+
         </main>
+            
+            <section class="flex-container">
+            <!-- Proyecto abierto para edición -->
+                <div class="pj--open flex-container-row">
+                    <div class="pj--open--title">
+                        <h3 class="andika-bold">Proyecto Nuevo</h3>
+                        <p class="andika-regular">(fecha creación 01/04/2024)</p>
+                    </div>
+                    <div class="pj--open--date flex-container">
+                        <label>Inicio</label>
+                        <h4 class="andika-regular">01 ABRIL 2024</h4>
+                    </div>
+                    <div class="pj--open--date flex-container">
+                        <label>Final</label>
+                        <h4 class="andika-regular">30 ABRIL 2024</h4>
+                    </div>
+                </div>
+            
+            </section>
         
         <script src="script.js"></script>
     </body>
