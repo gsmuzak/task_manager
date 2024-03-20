@@ -168,10 +168,11 @@ header {
     height: 25px;
 }
 .list--item--add h3{
-    font-size: medium;
+    font-size:smaller;
     margin: 0px;
     padding: 0px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 ul .list--item--new:hover, ul .list--item--new:focus {

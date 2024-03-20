@@ -69,6 +69,7 @@
                         <h4>30 ABRIL 2024</h4>
                     </div>
                 </div>
+
                 <div class="flex-container-row andika-regular pj--subsection">
                     <button class="flex-container-row pj--open--description animation__fast">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACV0lEQVR4nO2Zy2oUURCGG28Ll15WXl4iGMxqdhKokqpeNErc+wpKNrNL3McwCb7BSFfBRN248BmU+ABqVuayTrtRqmccMCTM6T59OS39w4GBYab/71z/Ux1FvXr18lYyTi6j8AooraNSCsJfUfgElX7lTfgEhPfz75TWH6fxw+FweClqW6R0D4VfofABKv8u1ugHKG2upvHdxo2vjpPbqLwLSllx4/82UMpAaYQTvNWIeVRaQ6VjX+PngBxBGj+tzfjS7vOrIPymauN4FkR4x55VqXmc4HVQ+lC3efzbhN/bM6vr+SbN6xziYzJOrnkDNDFt8OJ1MfIzn8bP2jKP80ZPSpln4ZsgfBgAwHGpLdb2+bIPvUilp5LwdiHzdjr6HFKVAyhlOMH77r1v8cBj2KsGwCnEppN5C1mWU0IDQOEDC40uvb/i9aC6ADRfC8sLAaaROEwAFH7pMgISMMDbxSOQXzzKmywrdAP4sngEHKNyGwAgfOiyBrJQAVD49P8HwM5PIen6Ipaub6Ma7kEGSi8WAljRKVQATOMHTmEOhL+HBgDC35yreRZdQwNApY2oqxcaFD6FPbjjDDAbhVEwAEpbUVE9Gic3QrjUg9JR6bqp1SpbB5A4KWV+DiG802Lvv458ZfdQENbmAejd4NPgSlSFrNCaF1yb6/m9yoq7Z4q8oyamzaCqnj9PVqusZ3ein94LtmDddNsOGG/jYv9BW7ZtR03LTkeLHWWy0/Q3tFH4hK1DswC4bHUby+x28bCb3ewFXpZ/Fv5s31kktlQZxGvWXr2i7usPseDsn8oBAbAAAAAASUVORK5CYII="
@@ -78,8 +79,10 @@
                     <h3 class="pj--open--time--remaining">
                         Faltan 29 días para la finalización del proyecto.</h3>
                 </div>
+
                 <div class="flex-container andika-regular">
                     <ul class="list--container">
+                        <!--
                         <li class="list--item list--item--high">Importante
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nO2YTQrCMBCFv2NU3IoX8uc8Lr2KVq9lNwr2BJFiXBanZJLQ8j6Y3UDem3kpNCCE8OQEhD91ZsbiQw0TR6CbIM6rOmDvYaCG+BDrIQPAIU6ixvR3HhsQQnwpfYndkQG0gTTGJngBmlitYcrWfnfGDhqE/FgZDFj73bEeNPXrEmTAiDaAIpSGIoQilIYihCKUhiKEIpSGIoQilMZiI9TM/ZfyGoUMdTMYsPa70xd83Hr7y4d7QQNtDgNb4FlA/AvYkIl1fJjKEac+Tj6beCGWyAfTMCVjjM+QqQAAAABJRU5ErkJggg=="
                             class="trash--icon animation__fast" />
@@ -92,11 +95,13 @@
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nO2YTQrCMBCFv2NU3IoX8uc8Lr2KVq9lNwr2BJFiXBanZJLQ8j6Y3UDem3kpNCCE8OQEhD91ZsbiQw0TR6CbIM6rOmDvYaCG+BDrIQPAIU6ixvR3HhsQQnwpfYndkQG0gTTGJngBmlitYcrWfnfGDhqE/FgZDFj73bEeNPXrEmTAiDaAIpSGIoQilIYihCKUhiKEIpSGIoQilMZiI9TM/ZfyGoUMdTMYsPa70xd83Hr7y4d7QQNtDgNb4FlA/AvYkIl1fJjKEac+Tj6beCGWyAfTMCVjjM+QqQAAAABJRU5ErkJggg=="
                             class="trash--icon animation__fast" />
                         </li>
-                        <li class="list--item--new animation__fast">
+                        -->
+                        <li class="list--item--new animation__fast" onclick="createNewTask()">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADTUlEQVR4nO2aTU8UQRCGHwPCGoy4Cyse5Wgw6p9QQVGBG4o3DV5EsnpVOaMnExJ+h4YQNGpI1IgfqBcVgZPKwYg3FwiaMRXfSTpxv3d2ZpbwJp0sVE9113R1dfVbA9vYukgBfcBtYAr4BPwENtTs90fJrM9ZIElMkAAuAA+AP4BXZvsNzABDQHMUBuwCrgErzqTWgcfADa3MQb3xnWpJ/c9kN4EnesZ//huQ0csJBaeAZWcCr4CLQGsFuvYCl4DXjr4loIcawt7UpDPgG+B4gPq7gbeO/olarM5+TdwG+AVcARqCHoR/Oq8CWWe1O4JS3qnl9hR1DlF7HAYWNOai5lAV0o7Cl0A74SEJPNXYy/KKipBw3Ok50EL4aAFeOG5W0Z6ZdNzJDruo0OZ4hQWAskOsv7HD2BOl7Jms5mTRreTDzj8nLDpVCz+cVotRZ/OX5GLXnXOiIUaGNALvpMuMKohmpQrW+RjBIChDDCela6XYqgw5EYIYGrLDiaTnCnV8qE6WO8XREMOw9E2TByml1esVJoBhGZLU/WYz3zz7NeAjgkXQhhhmpfM0OXBHQrtPxN2QMekczyWckvBMHRjSL533cgk/S2i3uLgb0iWdxgv8h1UJU3VgSLt0fs8l3JCwqYzJ1aqVcnD7PMHWNWS1jlwrXci1tsxmn5LQGMC4GzJQKPz6B6KRZ3V9IPZJaGxhvaQovfmSMT9pNAYwroaknKRxT75OMxrUaMy4GnJZ+mxP58V5dTIuNq4Xq3npGyx20HxVxxMxNKRXur6UUobIqPN8DMmH99I1UsoDCYfrNUI5LoZkpGehnKJQjx7KihyLGkeBNc2p7FLGhPMGjLaMCmmRcjaXu5UoSIgW8kQkR0Fi7wbmNIe5auqMaSVmflnB/g4LKeCZxl4KouDT6SytudkRwtkTixrTsvIDQSnucNwsK+7VwmHQaFR0WnPcaV/QgyScAOCJUO4J8MS2UoZ/Tvgbu6a1925n2T1xscMVfsWQUu7kpx2eXCnIanHR1Rl10hlPGaml17fEO3UpbDeptaloNKA+sw5P4KcdI1F9AdEsVnxaV4BySYZNZbGDURmQC63iYu3Wdl+1xx/ORzX2+4Oup+Pqm/c+sQ3qHH8BO95tuSa+KVIAAAAASUVORK5CYII="
                             width="30"height="30" class="animation__mid"/>
                             Tarea nueva...
                         </li>
+                        <!--
                         <li class="list--item--add">
                             
                             <input class="input--text" type="text" placeholder="Nombre de la tarea nueva">
@@ -113,6 +118,7 @@
                                 
                             </form>
                         </li>
+                        -->
                     </ul>
                 </div>
             </section>
